@@ -10,7 +10,7 @@ public class Day15_AddressBookLoginTest {
     AddressBookLoginPage addressBookLoginPage = new AddressBookLoginPage();
 
     @Test
-    public void loginTest() {
+    public void loginTest() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("address_url"));
         addressBookLoginPage.username.sendKeys(ConfigReader.getProperty("address_username"));
         addressBookLoginPage.password.sendKeys(ConfigReader.getProperty("address_pass"));
