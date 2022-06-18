@@ -24,7 +24,10 @@ public class ReservationWithoutLogin2 {
         Actions actions = new Actions(Driver.getDriver());
 
         actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("location")).perform();//location from .properties file
-        reservationPage.selectLocation.click();
+
+        ReusableMethods.waitForClickablility(reservationPage.selectLocation,2).click();//select random location
+
+
 
         actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("location")).perform();
         reservationPage.selectLocation.click();

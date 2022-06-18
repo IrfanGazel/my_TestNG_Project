@@ -17,7 +17,7 @@ public class ReservationPage {
     @FindBy(xpath = "//select[@name='car']")
     public WebElement selectCar;
 
-    @FindBy(xpath = "//*[text()='Virginia']")//choosing a city after selecting a state
+    @FindBy(xpath = "//input[@name='pickUpLocation']")//choosing a city after selecting a state
     public WebElement selectLocation;
 
     @FindBy(xpath = "//*[text()='Please first login']")
